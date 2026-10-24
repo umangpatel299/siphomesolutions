@@ -113,6 +113,30 @@ input,textarea,select{transition:border-color .2s,box-shadow .2s}input:focus,tex
 .shore{position:absolute;left:0;right:0;bottom:0;width:100%;height:var(--sh);margin:0}
 .hero .wrap{position:relative;z-index:1;padding-bottom:calc(var(--sh) - 100px)}
 @media (max-width:860px){.hero{--sh:230px}.hero .wrap{padding-bottom:calc(var(--sh) - 70px)}}
+/* sunset: one full cycle every 5 minutes */
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#ffe6cf 0,#ffcb9c 35%,#ff9f66 72%,#ff8052 100%);opacity:0;animation:skyset 300s ease-in-out infinite}
+.sunmove{animation:sunmv 300s ease-in-out infinite}
+.core{animation:corec 300s ease-in-out infinite}
+.glow2{animation:fade1 300s ease-in-out infinite}
+.lakewarm{animation:lakew 300s ease-in-out infinite}
+.reflect{animation:refl 300s ease-in-out infinite}
+.reflect ellipse{transform-box:fill-box;transform-origin:center;animation:shim 2.6s ease-in-out infinite alternate}
+.reflect ellipse:nth-child(2){animation-delay:-.6s}.reflect ellipse:nth-child(3){animation-delay:-1.2s}.reflect ellipse:nth-child(4){animation-delay:-1.8s}.reflect ellipse:nth-child(5){animation-delay:-2.2s}
+@keyframes shim{from{transform:scaleX(.65)}to{transform:scaleX(1.25)}}
+.dusk{animation:duskf 300s ease-in-out infinite}
+.mesa{animation:mesan 300s ease-in-out infinite}.mesa-far{animation:mesaf 300s ease-in-out infinite}
+.cloud>g{animation:ctint 300s ease-in-out infinite}.cloud>ellipse{animation:ctint2 300s ease-in-out infinite}
+@keyframes skyset{0%,16%{opacity:0}44%,58%{opacity:.8}86%,100%{opacity:0}}
+@keyframes sunmv{0%,16%{transform:translateY(0)}44%,58%{transform:translateY(104px)}86%,100%{transform:translateY(0)}}
+@keyframes corec{0%,16%{fill:#ffe585}44%,58%{fill:#ff8a2a}86%,100%{fill:#ffe585}}
+@keyframes fade1{0%,16%{opacity:0}44%,58%{opacity:1}86%,100%{opacity:0}}
+@keyframes lakew{0%,16%{opacity:0}44%,58%{opacity:.6}86%,100%{opacity:0}}
+@keyframes refl{0%,16%{opacity:0}44%,58%{opacity:.9}86%,100%{opacity:0}}
+@keyframes duskf{0%,16%{opacity:0}44%,58%{opacity:.8}86%,100%{opacity:0}}
+@keyframes mesan{0%,16%{fill:#0b2f5b}44%,58%{fill:#2b2a5e}86%,100%{fill:#0b2f5b}}
+@keyframes mesaf{0%,16%{fill:#8aa6c4}44%,58%{fill:#d9a08f}86%,100%{fill:#8aa6c4}}
+@keyframes ctint{0%,16%{fill:#fff}44%,58%{fill:#ffd6b0}86%,100%{fill:#fff}}
+@keyframes ctint2{0%,16%{fill:#d3e3f3}44%,58%{fill:#eaa987}86%,100%{fill:#d3e3f3}}
 </style>
 </head>
 <body>
@@ -131,25 +155,28 @@ input,textarea,select{transition:border-color .2s,box-shadow .2s}input:focus,tex
 <svg class="shore" viewBox="0 0 1600 330" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Thunder Bay scene: Lake Superior, the Sleeping Giant, pine trees and rocky shore">
 <defs><linearGradient id="lk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8dbbe3"/><stop offset="1" stop-color="#2f6ea8"/></linearGradient>
 <radialGradient id="sg"><stop offset="0" stop-color="#fff6c9"/><stop offset=".45" stop-color="#ffeaa0" stop-opacity=".6"/><stop offset="1" stop-color="#ffeaa0" stop-opacity="0"/></radialGradient>
+<radialGradient id="sg2"><stop offset="0" stop-color="#ff9a40" stop-opacity=".95"/><stop offset=".5" stop-color="#ff7a30" stop-opacity=".35"/><stop offset="1" stop-color="#ff7a30" stop-opacity="0"/></radialGradient>
+<linearGradient id="lw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc27a"/><stop offset="1" stop-color="#d9693a"/></linearGradient>
+<linearGradient id="dk" x1="0" y1="0" x2="0" y2="1"><stop offset=".3" stop-color="#ff7a30" stop-opacity="0"/><stop offset="1" stop-color="#ff7a30" stop-opacity=".55"/></linearGradient>
 <symbol id="pine" viewBox="0 0 40 84"><path d="M20 0L31 26h-6l10 22h-8l13 26H0l13-26H5l10-22H9z"/><rect x="17" y="72" width="6" height="12"/></symbol></defs>
-<g transform="translate(200 0)"><g class="sun"><circle cx="330" cy="125" r="95" fill="url(#sg)"/><circle cx="330" cy="125" r="25" fill="#ffe585"/></g></g>
+<g transform="translate(200 0)"><g class="sunmove"><g class="sun"><circle class="glow2" cx="330" cy="125" r="170" fill="url(#sg2)" opacity="0"/><circle cx="330" cy="125" r="95" fill="url(#sg)"/><circle class="core" cx="330" cy="125" r="25" fill="#ffe585"/></g></g></g>
 <g class="cloud"><ellipse cx="6" cy="92" rx="66" ry="6" fill="#d3e3f3"/><g fill="#fff"><ellipse cx="0" cy="80" rx="70" ry="18"/><ellipse cx="40" cy="66" rx="42" ry="18"/><ellipse cx="-36" cy="70" rx="34" ry="14"/></g></g>
 <g class="cloud c2"><ellipse cx="-560" cy="132" rx="46" ry="5" fill="#d3e3f3"/><g fill="#fff"><ellipse cx="-560" cy="124" rx="50" ry="12"/><ellipse cx="-532" cy="114" rx="28" ry="12"/></g></g>
 <g class="cloud c3" opacity=".85"><g fill="#fff"><ellipse cx="-1000" cy="52" rx="44" ry="10"/><ellipse cx="-976" cy="44" rx="24" ry="10"/></g></g>
-<g transform="translate(200 0)"><path d="M380 238L470 226 560 204 640 176 700 150 735 138 770 150 800 132 850 126 905 136 950 134 1010 150 1070 178 1140 206 1200 224V260H380Z" fill="#8aa6c4"/>
-<path d="M560 240L640 206 700 176 740 160 775 170 805 150 850 146 900 156 940 154 1000 170 1060 198 1120 222V250H560Z" fill="#0b2f5b"/>
+<g transform="translate(200 0)"><path d="M380 238L470 226 560 204 640 176 700 150 735 138 770 150 800 132 850 126 905 136 950 134 1010 150 1070 178 1140 206 1200 224V260H380Z" class="mesa-far" fill="#8aa6c4"/>
+<path d="M560 240L640 206 700 176 740 160 775 170 805 150 850 146 900 156 940 154 1000 170 1060 198 1120 222V250H560Z" class="mesa" fill="#0b2f5b"/>
 <path d="M740 160l35 10 30-20 45-4 5 14-60 10-30 6z" fill="#1d4a7f" opacity=".7"/>
 <ellipse class="mist" cx="760" cy="226" rx="230" ry="9" fill="#fff" opacity=".45"/></g>
-<rect x="0" y="236" width="1600" height="94" fill="url(#lk)"/>
+<rect x="0" y="236" width="1600" height="94" fill="url(#lk)"/><rect class="lakewarm" x="0" y="236" width="1600" height="94" fill="url(#lw)" opacity="0"/>
 <g transform="translate(200 0)"><g fill="none" stroke="#fff" stroke-linecap="round" opacity=".7">
 <g class="wv"><path d="M60 270q40-8 80 0t80 0" stroke-width="2.5"/><path d="M420 262q40-8 80 0t80 0" stroke-width="2.5"/><path d="M700 258q40-7 80 0t80 0" stroke-width="2"/><path d="M960 272q40-8 80 0" stroke-width="2"/><path d="M1180 262q40-8 80 0" stroke-width="2"/></g>
 <g class="wv b"><path d="M200 300q50-9 100 0t100 0" stroke-width="2.5"/><path d="M560 284q50-9 100 0t100 0" stroke-width="2.5"/><path d="M820 300q60-10 120 0t120 0" stroke-width="3"/><path d="M500 310q60-8 120 0" stroke-width="2"/><path d="M1100 292q50-9 100 0" stroke-width="2.5"/></g></g>
 <g fill="none" stroke="#fff" stroke-width="1.6"><ellipse class="rip" cx="610" cy="268" rx="40" ry="6"/><ellipse class="rip r2" cx="880" cy="285" rx="46" ry="7"/><ellipse class="rip r3" cx="470" cy="300" rx="44" ry="7"/><ellipse class="rip r2" cx="1100" cy="270" rx="40" ry="6"/></g>
-<g fill="#fff"><ellipse class="spark" cx="520" cy="248" rx="7" ry="1.3"/><ellipse class="spark" cx="760" cy="270" rx="9" ry="1.5" style="animation-delay:-1s"/><ellipse class="spark" cx="900" cy="252" rx="6" ry="1.2" style="animation-delay:-2s"/><ellipse class="spark" cx="640" cy="300" rx="8" ry="1.4" style="animation-delay:-.5s"/><ellipse class="spark" cx="1000" cy="290" rx="9" ry="1.5" style="animation-delay:-1.6s"/><ellipse class="spark" cx="300" cy="262" rx="7" ry="1.3" style="animation-delay:-2.4s"/></g></g>
+<g fill="#fff"><ellipse class="spark" cx="520" cy="248" rx="7" ry="1.3"/><ellipse class="spark" cx="760" cy="270" rx="9" ry="1.5" style="animation-delay:-1s"/><ellipse class="spark" cx="900" cy="252" rx="6" ry="1.2" style="animation-delay:-2s"/><ellipse class="spark" cx="640" cy="300" rx="8" ry="1.4" style="animation-delay:-.5s"/><ellipse class="spark" cx="1000" cy="290" rx="9" ry="1.5" style="animation-delay:-1.6s"/><ellipse class="spark" cx="300" cy="262" rx="7" ry="1.3" style="animation-delay:-2.4s"/></g><g class="reflect" fill="#ffd08a" opacity="0"><ellipse cx="330" cy="244" rx="26" ry="2.4"/><ellipse cx="330" cy="256" rx="40" ry="2.4"/><ellipse cx="330" cy="270" rx="52" ry="2.4"/><ellipse cx="330" cy="286" rx="62" ry="2.4"/><ellipse cx="330" cy="304" rx="72" ry="2.4"/></g></g>
 <g><path d="M0 330V246l50-8 70 12 80-6 90 22 70 6 60 30 40 28z" fill="#a5afbd"/><path d="M0 330V280l60-10 70 16 80 8 50 26z" fill="#6f7c8e"/><path d="M110 330l60-30 80 10 50 20z" fill="#8c97a8"/>
 <g fill="#1f4f22"><g class="tree b"><use href="#pine" x="18" y="150" width="46" height="96"/></g><g class="tree c"><use href="#pine" x="70" y="176" width="36" height="76"/></g></g><g fill="#2b6a2e"><g class="tree "><use href="#pine" x="44" y="120" width="56" height="116"/></g><g class="tree b"><use href="#pine" x="108" y="168" width="40" height="84"/></g></g></g>
 <g transform="translate(400 0)"><g fill="#1f4f22"><g class="tree "><use href="#pine" x="1135" y="168" width="38" height="80"/></g></g><g fill="#2b6a2e"><g class="tree c"><use href="#pine" x="1090" y="140" width="52" height="108"/></g><g class="tree "><use href="#pine" x="1150" y="108" width="62" height="132"/></g><g class="tree b"><use href="#pine" x="1050" y="176" width="36" height="76"/></g></g>
-<path d="M1000 330V300q60-20 200-26V330Z" fill="#9aa5b4"/><path d="M1060 330V312q70-14 140-16V330Z" fill="#6f7c8e"/></g></svg>
+<path d="M1000 330V300q60-20 200-26V330Z" fill="#9aa5b4"/><path d="M1060 330V312q70-14 140-16V330Z" fill="#6f7c8e"/></g><rect class="dusk" x="0" y="0" width="1600" height="330" fill="url(#dk)" opacity="0" pointer-events="none"/></svg>
 </div>
 <div class="band"><div class="wrap"><span>RESIDENTIAL • COMMERCIAL • ALL SEASONS</span><span>www.siphomesolutions.com</span></div></div>
 
