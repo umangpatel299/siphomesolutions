@@ -114,18 +114,18 @@ input,textarea,select{transition:border-color .2s,box-shadow .2s}input:focus,tex
 .hero .wrap{position:relative;z-index:1;padding-bottom:calc(var(--sh) - 100px)}
 @media (max-width:860px){.hero{--sh:230px}.hero .wrap{padding-bottom:calc(var(--sh) - 70px)}}
 /* sunset: one full cycle every 5 minutes */
-.hero::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#ffe6cf 0,#ffcb9c 35%,#ff9f66 72%,#ff8052 100%);opacity:0;animation:skyset 300s ease-in-out infinite}
-.sunmove{animation:sunmv 300s ease-in-out infinite}
-.core{animation:corec 300s ease-in-out infinite}
-.glow2{animation:fade1 300s ease-in-out infinite}
-.lakewarm{animation:lakew 300s ease-in-out infinite}
-.reflect{animation:refl 300s ease-in-out infinite}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#ffe6cf 0,#ffcb9c 35%,#ff9f66 72%,#ff8052 100%);opacity:0;animation:skyset 150s ease-in-out infinite}
+.sunmove{animation:sunmv 150s ease-in-out infinite}
+.core{animation:corec 150s ease-in-out infinite}
+.glow2{animation:fade1 150s ease-in-out infinite}
+.lakewarm{animation:lakew 150s ease-in-out infinite}
+.reflect{animation:refl 150s ease-in-out infinite}
 .reflect ellipse{transform-box:fill-box;transform-origin:center;animation:shim 2.6s ease-in-out infinite alternate}
 .reflect ellipse:nth-child(2){animation-delay:-.6s}.reflect ellipse:nth-child(3){animation-delay:-1.2s}.reflect ellipse:nth-child(4){animation-delay:-1.8s}.reflect ellipse:nth-child(5){animation-delay:-2.2s}
 @keyframes shim{from{transform:scaleX(.65)}to{transform:scaleX(1.25)}}
-.dusk{animation:duskf 300s ease-in-out infinite}
-.mesa{animation:mesan 300s ease-in-out infinite}.mesa-far{animation:mesaf 300s ease-in-out infinite}
-.cloud>g{animation:ctint 300s ease-in-out infinite}.cloud>ellipse{animation:ctint2 300s ease-in-out infinite}
+.dusk{animation:duskf 150s ease-in-out infinite}
+.mesa{animation:mesan 150s ease-in-out infinite}.mesa-far{animation:mesaf 150s ease-in-out infinite}
+.cloud>g{animation:ctint 150s ease-in-out infinite}.cloud>ellipse{animation:ctint2 150s ease-in-out infinite}
 @keyframes skyset{0%,16%{opacity:0}44%,58%{opacity:.8}86%,100%{opacity:0}}
 @keyframes sunmv{0%,16%{transform:translateY(0)}44%,58%{transform:translateY(104px)}86%,100%{transform:translateY(0)}}
 @keyframes corec{0%,16%{fill:#ffe585}44%,58%{fill:#ff8a2a}86%,100%{fill:#ffe585}}
