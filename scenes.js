@@ -24,7 +24,37 @@ window.SIP_SCENES = (function () {
     return '<g transform="translate(' + x + " " + y + ") scale(" + s + ')" fill="' + G + '"><path d="M0 -70 L18 -30 H-18Z"/><path d="M0 -50 L24 -6 H-24Z"/><path d="M0 -28 L30 18 H-30Z"/><rect x="-3" y="18" width="6" height="10" fill="' + S + '"/></g>';
   };
 
+  var appliance = svg(
+      '<rect width="400" height="300" fill="#EEF2F5"/>' +
+      '<rect y="236" width="400" height="64" fill="url(#pTile)"/>' +
+      '<rect x="40" y="40" width="320" height="38" fill="' + wood + '"/><path d="M40 78h320" stroke="' + woodD + '" stroke-width="3"/>' +
+      '<g fill="#FFF" stroke="#C9D3DC" stroke-width="2"><rect x="70" y="104" width="122" height="134" rx="6"/><rect x="208" y="104" width="122" height="134" rx="6"/></g>' +
+      '<g fill="#E6ECF1"><rect x="78" y="112" width="106" height="16" rx="3"/><rect x="216" y="112" width="106" height="16" rx="3"/></g>' +
+      '<g fill="' + G + '"><circle cx="168" cy="120" r="4"/><circle cx="306" cy="120" r="4"/></g>' +
+      '<g fill="' + N + '"><circle cx="131" cy="182" r="38"/><circle cx="269" cy="182" r="38"/></g>' +
+      '<g fill="#9CC3DD"><circle cx="131" cy="182" r="28"/><circle cx="269" cy="182" r="28"/></g>' +
+      '<path d="M108 190 q12 -10 23 0 t23 0" stroke="#FFF" stroke-width="3" fill="none" opacity=".8"/>' +
+      '<g transform="translate(330 50)"><rect x="-8" y="0" width="16" height="22" rx="3" fill="' + M + '"/><rect x="-6" y="-8" width="12" height="9" rx="2" fill="' + G + '"/></g>' +
+      '<g transform="translate(60 54)"><rect x="-10" y="0" width="22" height="20" rx="3" fill="' + N + '"/></g>' +
+      '<g stroke="' + S + '" stroke-width="5" stroke-linecap="round"><path d="M352 236 l18 -60"/></g><circle cx="371" cy="172" r="7" fill="none" stroke="' + S + '" stroke-width="5"/>',
+      tile);
+  var furniture = svg(
+      '<rect width="400" height="300" fill="#EEF2F5"/>' +
+      planks(232, 68, wood, woodD) +
+      '<rect x="230" y="40" width="130" height="192" fill="#FFF" stroke="#C9D3DC" stroke-width="3"/>' +
+      '<g stroke="#C9D3DC" stroke-width="3"><path d="M230 88h130M230 136h130M230 184h130"/></g>' +
+      '<g fill="' + N + '"><rect x="246" y="60" width="16" height="28"/><rect x="266" y="54" width="14" height="34"/><rect x="284" y="64" width="18" height="24"/></g>' +
+      '<rect x="300" y="116" width="40" height="20" rx="3" fill="' + G + '"/>' +
+      '<g transform="translate(330 168)"><path d="M0 16 C-10 6 -8 -6 0 -2 M0 16 C6 2 14 -2 12 8" stroke="' + G + '" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="-7" y="14" width="14" height="4" fill="' + S + '"/></g>' +
+      '<g transform="translate(70 196) rotate(-8)"><rect width="120" height="14" fill="#E2C49F" stroke="' + woodD + '"/><rect y="20" width="120" height="14" fill="#D9B48C" stroke="' + woodD + '"/></g>' +
+      '<rect x="40" y="150" width="80" height="60" fill="#D7C1A0" stroke="#B89A72" stroke-width="2"/><path d="M40 166h80M80 150v16" stroke="#B89A72" stroke-width="2"/>' +
+      '<g transform="translate(176 150) rotate(35)"><rect x="-4" y="0" width="8" height="46" rx="3" fill="' + G + '"/><rect x="-2" y="-22" width="4" height="22" fill="#9AA4AE"/></g>' +
+      '<g transform="translate(200 208)"><path d="M0 0 h18 v6 h-12 v14 h-6z" fill="' + S + '"/></g>' +
+      '<g fill="#9AA4AE"><circle cx="150" cy="226" r="3"/><circle cx="162" cy="230" r="3"/><circle cx="140" cy="232" r="3"/></g>');
+
   return {
+    appliance: appliance,
+    furniture: furniture,
     kitchen: svg(
       '<rect width="400" height="300" fill="#EEF2F5"/>' +
       planks(232, 68, wood, woodD) +

@@ -18,6 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"SIP Home Solutions","url":"https://www.siphomesolutions.com/","telephone":"+1-807-357-2180","email":"info@siphomesolutions.com","logo":"https://www.siphomesolutions.com/sip-email-logo.png","image":"https://www.siphomesolutions.com/og-image.jpg","address":{"@type":"PostalAddress","addressLocality":"Thunder Bay","addressRegion":"ON","addressCountry":"CA"},"areaServed":"Thunder Bay, Ontario"}</script>
+<link rel="preconnect" href="https://images.unsplash.com">
 <meta name="description" content="SIP Home Solutions: renovations, repairs and maintenance for homes in Thunder Bay, Ontario.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,8 +52,8 @@ p{margin:0}
 .eyebrow{font-family:var(--f-display);font-weight:600;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:12px}
 .eyebrow::before{content:"";width:28px;height:2px;background:var(--green)}
 .lede{color:var(--slate);font-size:1.1rem;max-width:62ch}
-.sec{padding-block:clamp(64px,9vw,104px)}
-.sec-head{display:grid;gap:14px;margin-bottom:44px;max-width:720px}
+.sec{padding-block:clamp(44px,6vw,76px)}
+.sec-head{display:grid;gap:12px;margin-bottom:30px;max-width:720px}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:600;font-size:1.08rem;letter-spacing:.02em;padding:13px 22px;border-radius:var(--r);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,transform .2s,border-color .2s}
@@ -71,8 +72,8 @@ p{margin:0}
 .top span{display:inline-flex;gap:8px;align-items:center}
 .top svg{width:15px;height:15px;color:var(--green-lt)}
 header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:10px}
-.brand img{height:62px;width:auto;display:block}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:6px}
+.brand img{height:84px;width:auto;display:block}
 .links{display:flex;align-items:center;gap:28px}
 .links a{font-family:var(--f-display);font-weight:600;font-size:1.05rem;color:var(--navy);text-decoration:none;letter-spacing:.02em}
 .links a:not(.btn):hover{color:var(--green)}
@@ -81,16 +82,28 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 
 /* hero */
 .hero{position:relative;background:linear-gradient(180deg,var(--paper) 0%,var(--wash) 100%);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:clamp(48px,7vw,88px) 0}
-.hero-copy{display:grid;gap:22px;padding-bottom:clamp(40px,6vw,80px);min-width:0}
-.hero h1{font-size:clamp(2.6rem,5.6vw,4.3rem);font-weight:700;letter-spacing:-.01em}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;padding-block:clamp(24px,3.5vw,44px) clamp(36px,4.5vw,56px)}
+.hero-copy{display:grid;gap:18px;min-width:0}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.7rem);font-weight:700;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--green)}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .checks{display:flex;flex-wrap:wrap;gap:10px 24px;list-style:none;padding:0;margin:0;color:var(--slate);font-weight:600}
 .checks li{display:flex;gap:8px;align-items:center}
 .checks svg{width:18px;height:18px;color:var(--green)}
-.hero-art{align-self:end;min-width:0}
-.hero-art svg{display:block;width:100%;height:auto;max-width:100%}
+.hero-art{min-width:0;position:relative;padding:0 0 34px 34px}
+.hero-main{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:5/4;max-width:100%;background:var(--wash);box-shadow:0 24px 50px rgba(11,53,88,.18)}
+.hero-main svg,.hero-main img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+.hero-main img{animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.07) translate(-1%,-1%)}}
+.hero-inset{position:absolute;left:0;bottom:0;width:42%;aspect-ratio:1/1;border-radius:10px;overflow:hidden;border:5px solid var(--paper);box-shadow:0 14px 34px rgba(11,53,88,.22);background:var(--navy)}
+.hero-inset img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-inset .fallback{position:absolute;inset:0;display:grid;place-items:center;color:#fff;text-align:center;padding:12px;font-family:var(--f-display);font-weight:600;font-size:1.05rem;line-height:1.2}
+.hero-badge{position:absolute;right:16px;top:16px;background:var(--paper);border-radius:10px;padding:12px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 12px 30px rgba(11,53,88,.18);animation:float 5s ease-in-out infinite}
+.hero-badge .ico{width:42px;height:42px;background:var(--green);border-color:var(--green);color:#fff}
+.hero-badge .ico svg{width:20px;height:20px}
+.hero-badge b{display:block;font-family:var(--f-display);font-size:1.1rem;color:var(--navy);line-height:1.1}
+.hero-badge small{color:var(--slate);font-size:.85rem}
+@keyframes float{50%{transform:translateY(-6px)}}
 
 /* stat band */
 .band{background:var(--navy);color:#fff}
@@ -134,7 +147,9 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 
 /* why */
 .why{background:var(--navy-deep);color:#fff;position:relative;overflow:hidden}
-.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:center}
+.why-photo{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:16/10;max-width:100%;background:#123e63}
+.why-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .why h2{color:#fff}
 .why .lede{color:var(--mist)}
 .why .eyebrow{color:var(--green-lt)}.why .eyebrow::before{background:var(--green-lt)}
@@ -193,7 +208,7 @@ footer a:hover{color:var(--green-lt)}
 header.nav{transition:box-shadow .25s}
 header.nav.scrolled{box-shadow:0 6px 24px rgba(11,53,88,.10)}
 .brand img{transition:height .25s}
-header.nav.scrolled .brand img{height:50px}
+header.nav.scrolled .brand img{height:62px}
 .links a.active:not(.btn){color:var(--green)}
 .links a:not(.btn){position:relative}
 .links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2px;background:var(--green);transition:right .25s}
@@ -248,6 +263,7 @@ header.nav.scrolled .brand img{height:50px}
 .proj .view svg{width:18px;height:18px}
 .proj:hover .view,.proj:focus-visible .view{transform:none;opacity:1}
 .proj.hide{display:none}
+.proj .media img{position:absolute;inset:0}
 .proj.pop{animation:pop .45s cubic-bezier(.2,.8,.2,1)}
 @keyframes pop{from{transform:scale(.94);opacity:.2}to{transform:none;opacity:1}}
 
@@ -309,7 +325,7 @@ header.nav.scrolled .brand img{height:50px}
   .links .btn{margin-top:14px;justify-content:center}
   .menu-btn{display:block}
   .hero .wrap,.why .wrap,.area-grid,.contact-grid,.split-grid{grid-template-columns:1fr}
-  .hero-art{margin-inline:-20px}
+  .hero-art{padding:0 0 26px 22px}
   .band .wrap{grid-template-columns:1fr 1fr}
   .band .cell:nth-child(3){border-left:0}
   .band .cell{border-top:1px solid rgba(255,255,255,.14)}
@@ -322,7 +338,8 @@ header.nav.scrolled .brand img{height:50px}
 @media (max-width:620px){
   body{font-size:16px;padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
   .top .hide-sm{display:none}
-  .brand img{height:50px}
+  .brand img{height:62px}
+  header.nav.scrolled .brand img{height:54px}
   .svc-grid{grid-template-columns:1fr 1fr;gap:12px}
   .svc{padding:20px 16px}
   .row,.why-list{grid-template-columns:1fr}
@@ -334,6 +351,7 @@ header.nav.scrolled .brand img{height:50px}
   .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--navy);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));gap:10px;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
   .callbar .btn{justify-content:center;padding:11px 10px}
 }
+@media (max-width:620px){.hero-badge{right:10px;top:10px;padding:9px 12px}.hero-badge .ico{width:34px;height:34px}.hero-badge b{font-size:.98rem}.hero-inset{width:40%}}
 @media (max-width:400px){.svc-grid{grid-template-columns:1fr}.ccard{grid-template-columns:44px 1fr}.ccard .copy{grid-column:2;justify-self:start}}
 </style>
 </head>
@@ -379,7 +397,7 @@ header.nav.scrolled .brand img{height:50px}
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg><use href="#i-menu"/></svg></button>
     <nav class="links" id="navLinks">
       <a href="#services">Services</a>
-      <a href="#work">Our work</a>
+      <a href="#work">Projects</a>
       <a href="#process">How we work</a>
       <a href="#area">Service area</a>
       <a href="#contact">Contact</a>
@@ -407,9 +425,9 @@ header.nav.scrolled .brand img{height:50px}
       </ul>
     </div>
 
-    <div class="hero-art" aria-hidden="true">
-      <!-- Vector scene: a renovated home on the shore, the Sleeping Giant across Lake Superior -->
-      <svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg">
+    <div class="hero-art">
+      <div class="hero-main">
+        <svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF0F5"/><stop offset="1" stop-color="#F7F9FB"/></linearGradient>
           <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D5A86"/><stop offset="1" stop-color="#0B3558"/></linearGradient>
@@ -460,6 +478,16 @@ header.nav.scrolled .brand img{height:50px}
         <path d="M120 420 C220 398 340 400 470 424" fill="none" stroke="#1F6B45" stroke-width="6" stroke-linecap="round"/>
         <path d="M90 410 C200 384 330 386 500 410" fill="none" stroke="#0B3558" stroke-width="4" stroke-linecap="round" opacity=".8"/>
       </svg>
+        <img src="https://images.unsplash.com/photo-1628744448839-a475cc0e90c3?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" alt="A renovated two-storey family home with wood siding" onerror="this.remove()">
+      </div>
+      <div class="hero-inset" aria-hidden="true">
+        <div class="fallback">Renovations<br>Repairs<br>Maintenance</div>
+        <img src="https://images.unsplash.com/photo-1574359411659-15573a27fd0c?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=75" alt="" style="position:relative" onerror="this.remove()">
+      </div>
+      <div class="hero-badge">
+        <div class="ico"><svg><use href="#i-check"/></svg></div>
+        <div><b>Free written quotes</b><small>Thunder Bay &amp; area</small></div>
+      </div>
     </div>
   </div>
 </section>
@@ -532,14 +560,15 @@ header.nav.scrolled .brand img{height:50px}
   <div class="wrap">
     <div class="work-head">
       <div class="sec-head">
-        <div class="eyebrow">Our work</div>
-        <h2>Project gallery</h2>
-        <p class="lede">A look at the kinds of projects we take on. Tap any project for what's included.</p>
+        <div class="eyebrow">Projects</div>
+        <h2>Projects we take on</h2>
+        <p class="lede">Ideas for your next project, inside and out. Tap any one to see what the job usually includes.</p>
       </div>
       <div class="filters" role="group" aria-label="Filter projects">
         <button type="button" data-f="all" aria-pressed="true">All</button>
         <button type="button" data-f="interior" aria-pressed="false">Interiors</button>
         <button type="button" data-f="exterior" aria-pressed="false">Exteriors</button>
+        <button type="button" data-f="install" aria-pressed="false">Installs</button>
       </div>
     </div>
     <div class="gallery" id="gallery"></div>
@@ -602,6 +631,7 @@ header.nav.scrolled .brand img{height:50px}
     <div style="display:grid;gap:16px">
       <div class="eyebrow">Why SIP</div>
       <h2>Built for Northwestern Ontario homes</h2>
+      <div class="why-photo"><img src="https://images.unsplash.com/photo-1567361808960-dec9cb578182?auto=format&amp;fit=crop&amp;w=1000&amp;q=70" alt="Carpentry tools laid out on a workbench" loading="lazy" onerror="this.parentNode.remove()"></div>
       <p class="lede">Long winters, freeze-thaw cycles and lake-effect weather are hard on buildings. We choose materials and methods that stand up to Thunder Bay's climate.</p>
     </div>
     <div class="why-list reveal">
@@ -708,7 +738,7 @@ header.nav.scrolled .brand img{height:50px}
       <ul><li><a href="tel:+18073572180">+1 (807) 357-2180</a></li><li><a href="mailto:info@siphomesolutions.com">info@siphomesolutions.com</a></li><li><a href="https://www.siphomesolutions.com" target="_blank" rel="noopener">www.siphomesolutions.com</a></li><li>Thunder Bay, ON</li></ul>
     </div>
   </div>
-  <div class="legal"><div class="wrap"><span>© <span id="yr">2026</span> SIP Home Solutions. All rights reserved.</span><span>Residential · Year-round</span></div></div>
+  <div class="legal"><div class="wrap"><span>© <span id="yr">2026</span> SIP Home Solutions. All rights reserved.</span><span>Residential · Year-round · Photos: Unsplash</span></div></div>
 </footer>
 
 <div class="callbar">
@@ -746,43 +776,55 @@ header.nav.scrolled .brand img{height:50px}
 
   /* ---------- project gallery ---------- */
   var PROJECTS=[
-    {key:'kitchen',cat:'interior',label:'Kitchen',title:'Kitchen renovation',wide:true,service:'Home Renovations',
+    {key:'kitchen',img:'photo-1602028915047-37269d1a73f7',cat:'interior',label:'Kitchen',title:'Kitchen renovation',wide:true,service:'Home Renovations',
      desc:'A full kitchen update with new cabinetry, counters, tile backsplash and flooring.',
      list:['Demolition and disposal','Cabinet and countertop install','Tile backsplash','Plumbing and lighting coordination','Flooring and trim']},
-    {key:'bathroom',cat:'interior',label:'Bathroom',title:'Bathroom remodel',service:'Home Renovations',
+    {key:'bathroom',img:'photo-1584622650111-993a426fbf0a',cat:'interior',label:'Bathroom',title:'Bathroom remodel',service:'Home Renovations',
      desc:'Walk-in shower, new vanity and tile from floor to ceiling.',
      list:['Tear-out to the studs','Waterproofing and tile','Vanity, mirror and fixtures','Ventilation fan','Paint and finishing']},
-    {key:'basement',cat:'interior',label:'Basement',title:'Basement finishing',wide:true,service:'Home Renovations',
+    {key:'basement',img:'photo-1765959617888-30837a158667',cat:'interior',label:'Basement',title:'Basement finishing',wide:true,service:'Home Renovations',
      desc:'Turning unfinished space into a warm family room with lighting built in.',
      list:['Framing and insulation','Vapour barrier','Pot lights and outlets','Drywall, taping and paint','Flooring and trim']},
-    {key:'deck',cat:'exterior',label:'Decks & Fencing',wide:true,title:'Backyard deck',service:'Decks & Fencing',
+    {key:'deck',img:'photo-1613544723412-b331bda01e87',cat:'exterior',label:'Decks & Fencing',wide:true,title:'Backyard deck',service:'Decks & Fencing',
      desc:'A deck with railings and stairs, built to handle Thunder Bay winters.',
      list:['Layout and footings','Pressure-treated or composite boards','Railings and stairs','Stain and sealing']},
-    {key:'exterior',cat:'exterior',label:'Painting',title:'Exterior repaint',service:'Interior & Exterior Painting',
+    {key:'exterior',img:'photo-1742900280864-bcc27353ceba',cat:'exterior',label:'Painting',title:'Exterior repaint',service:'Interior & Exterior Painting',
      desc:'Fresh siding and trim colour with proper surface preparation.',
      list:['Wash and scrape','Caulking and spot repairs','Primer where needed','Two finish coats']},
-    {key:'flooring',cat:'interior',label:'Flooring',title:'Hardwood & vinyl plank flooring',service:'Flooring',
+    {key:'flooring',img:'photo-1585128792020-803d29415281',cat:'interior',label:'Flooring',title:'Hardwood & vinyl plank flooring',service:'Flooring',
      desc:'New floors through the main living space, with matching baseboards.',
      list:['Old flooring removal','Subfloor levelling','Install and transitions','Baseboard and quarter round']},
-    {key:'windows',cat:'exterior',label:'Doors & Windows',title:'Front entry & windows',service:'Doors & Windows',
+    {key:'windows',img:'photo-1601041597271-71988152f98b',cat:'exterior',label:'Doors & Windows',title:'Front entry & windows',service:'Doors & Windows',
      desc:'A new insulated entry door with sidelights and replacement windows.',
      list:['Measure and order','Removal and install','Insulation and flashing','Interior and exterior trim']},
-    {key:'restoration',cat:'interior',label:'Restoration',wide:true,title:'Water damage repair',service:'Restoration Services',
+    {key:'restoration',img:'photo-1768321903410-54961e343b71',cat:'interior',label:'Restoration',wide:true,title:'Water damage repair',service:'Restoration Services',
      desc:'Removing damaged material and rebuilding the wall as good as new.',
-     list:['Remove damaged drywall and insulation','Dry-out check','Rebuild, tape and mud','Prime and paint to match']}
+     list:['Remove damaged drywall and insulation','Dry-out check','Rebuild, tape and mud','Prime and paint to match']},
+    {key:'appliance',img:'photo-1626806819282-2c1dc01a5e0c',cat:'install',label:'Appliances',title:'Laundry & appliance installs',service:'Appliance Installation',
+     desc:'Washers, dryers, dishwashers and ranges installed, levelled and hooked up properly.',
+     list:['Remove and haul away the old unit','Water, drain and vent hookups','Levelling and anti-tip brackets','Test run before we leave']},
+    {key:'furniture',img:'photo-1571018400279-7f33252d0ad6',cat:'install',label:'Furniture Assembly',title:'Furniture assembly',service:'Furniture Assembly',
+     desc:'Beds, dressers, desks and shelving built and secured, so you can skip the instructions.',
+     list:['Assembly to manufacturer specs','Wall anchoring for tall pieces','Placement where you want it','Packaging cleaned up']}
   ];
   var gal=document.getElementById('gallery'),cards=[];
   PROJECTS.forEach(function(p,i){
     var b=document.createElement('button');
     b.type='button';b.className='proj reveal'+(p.wide?' wide':'');b.dataset.cat=p.cat;b.dataset.i=i;
     b.setAttribute('aria-label',p.title+': view details');
-    b.innerHTML='<div class="media">'+(window.SIP_SCENES?SIP_SCENES[p.key]:'')+'</div><span class="view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><div class="cap"><small>'+p.label+'</small><b>'+p.title+'</b></div>';
+    b.innerHTML='<div class="media">'+(window.SIP_SCENES&&SIP_SCENES[p.key]?SIP_SCENES[p.key]:'')+'</div><span class="view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><div class="cap"><small>'+p.label+'</small><b>'+p.title+'</b></div>';
     b.addEventListener('click',function(){openLB(i)});
     gal.appendChild(b);cards.push(b);
-    // Real photo swap: drop images/<key>.jpg next to this page and it replaces the illustration.
-    var img=new Image();img.alt=p.title;img.loading='lazy';
-    img.onload=function(){p.photo=img.src;var m=b.querySelector('.media');m.innerHTML='';m.appendChild(img)};
-    img.src='images/'+p.key+'.jpg';
+    // Photo order: your own photo (images/<key>.jpg) first, then the stock photo, else the illustration stays.
+    var srcs=['images/'+p.key+'.jpg'];
+    if(p.img)srcs.push('https://images.unsplash.com/'+p.img+'?auto=format&fit=crop&w=1000&q=70');
+    (function tryNext(k){
+      if(k>=srcs.length)return;
+      var img=new Image();img.alt=p.title;img.decoding='async';
+      img.onload=function(){p.photo=img.src;var m=b.querySelector('.media');m.appendChild(img)};
+      img.onerror=function(){tryNext(k+1)};
+      img.src=srcs[k];
+    })(0);
   });
   document.querySelectorAll('.filters button').forEach(function(btn){
     btn.addEventListener('click',function(){
@@ -803,7 +845,7 @@ header.nav.scrolled .brand img{height:50px}
   function fill(i){
     var p=PROJECTS[i];cur=i;
     var m=document.getElementById('lb-media');
-    m.innerHTML=p.photo?'<img src="'+p.photo+'" alt="'+p.title+'">':SIP_SCENES[p.key];
+    m.innerHTML=p.photo?'<img src="'+p.photo.replace("w=1000","w=1400")+'" alt="'+p.title+'">':(SIP_SCENES[p.key]||'');
     document.getElementById('lb-cat').textContent=p.label;
     document.getElementById('lb-title').textContent=p.title;
     document.getElementById('lb-desc').textContent=p.desc;
