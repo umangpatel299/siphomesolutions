@@ -215,9 +215,10 @@ a.svc{text-decoration:none;color:inherit}
     </div>
     <div>
       <h4>Contact</h4>
-      <ul><li><a href="tel:+18073572180">+1 (807) 357-2180</a></li><li><a href="mailto:info@siphomesolutions.com">info@siphomesolutions.com</a></li><li><a href="https://www.siphomesolutions.com" target="_blank" rel="noopener">www.siphomesolutions.com</a></li><li>Thunder Bay, ON</li><li><a href="https://maps.app.goo.gl/CeombPP18SzqdnvK8" target="_blank" rel="noopener me">Google Reviews &amp; Map</a></li><li><a href="https://www.facebook.com/p/SIP-Home-Solutions-61596300652321/" target="_blank" rel="noopener me">Facebook: SIP Home Solutions</a></li><li><a href="https://www.instagram.com/siphomesolutions/" target="_blank" rel="noopener me">Instagram: @siphomesolutions</a></li><li><a href="/compliance/">Compliance portal</a></li></ul>
+      <ul><li><a href="tel:+18073572180">+1 (807) 357-2180</a></li><li><a href="mailto:info@siphomesolutions.com">info@siphomesolutions.com</a></li><li><a href="https://www.siphomesolutions.com" target="_blank" rel="noopener">www.siphomesolutions.com</a></li><li>Thunder Bay, ON</li><li><a href="https://maps.app.goo.gl/CeombPP18SzqdnvK8" target="_blank" rel="noopener me">Google Reviews &amp; Map</a></li><li><a href="https://www.facebook.com/p/SIP-Home-Solutions-61596300652321/" target="_blank" rel="noopener me">Facebook: SIP Home Solutions</a></li><li><a href="https://www.instagram.com/siphomesolutions/" target="_blank" rel="noopener me">Instagram: @siphomesolutions</a></li></ul>
     </div>
   </div>
+  <div class="wrap" style="display:block;padding-block:0 28px"><!-- Entuitive Workforce Compliance badge --><div id="entuitive-widget"></div></div>
   <div class="legal"><div class="wrap"><span>© <span id="yr">2026</span> SIP Home Solutions. All rights reserved.</span><span>Residential · Year-round · Photos: Unsplash</span></div></div>
 </footer>
 
@@ -233,6 +234,18 @@ a.svc{text-decoration:none;color:inherit}
   nav.addEventListener('click',function(e){if(e.target.closest('a')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
   var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();
 })();
+</script>
+<script>
+/* Entuitive Workforce Compliance widget. Key is locked to www.siphomesolutions.com */
+var e, t, i, n, d;
+(e = window), (t = document), (i = "script"),
+(window.entuitiveSettings = { apiKey: "12d12f2d3ec1a6f1a53c5f5ebcf12c9c7dba28f309d6af0fd0a44a26b40f8984" }),
+(e["Entuitive-Widget"] = "w1"),
+(e.w1 = e.w1 || function () { (e.w1.q = e.w1.q || []).push(arguments); }),
+(n = t.createElement(i)), (d = t.getElementsByTagName(i)[0]), (n.id = "w1"),
+(n.src = "https://widget.entuitivecompliance.com/entuitiveWidget.js"),
+(n.async = 1), d.parentNode.insertBefore(n, d),
+w1("init", { targetElementId: "entuitive-widget" });
 </script>
 </body>
 </html>
